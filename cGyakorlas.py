@@ -1,3 +1,7 @@
+import math
+
+
+
 def harom():
     # 1. megoldás
     for i in range(0,21,1):
@@ -57,5 +61,53 @@ def het():
     else:
         for i in range(0, szorzat+1,1):
             print(i, end=" ")
+def nyolc():
+    szam1 = beolvas()
+    szam2 = beolvas()
+    szorzat = szam1 * szam2
+    if szorzat < 0:
+        i = 0
+        while i<szorzat-1:
+            print(i, end=" ")
+            i -= 1
+            # i=i-1 ugyanaz
+    else:
+        i = 0
+        while i < szorzat+1:
+            print(i, end=" ")
+            i += 1
+
 def kilenc():
-    pass
+    for i in range(1,8):
+        print(i, end=",")
+        if i==7:
+            print(i, end=" ")
+            #print(str+(i))+",", end=" ")
+def kilencA():
+    for i in range(0, 8, 1):
+        #print(str(i)+",", end = " ")
+        print(", "+str(i), end=" ")
+
+
+def beolvas2():
+    szam=float(input("Kérem adjon meg egy valós számot!"))
+    return szam
+def tizenegy():
+    x=beolvas2()
+    y=beolvas2()
+
+    eredmeny=3*x+pow(y,2)
+    print("3*x"+str(x)+"+"+str(y)+"^2="+str(eredmeny))
+
+def tizenketto():
+    x = beolvas2()
+    y = beolvas2()
+    db = 0
+    for szam in range(math.ceil(x), round(y)+1, 1):
+        #print(szam)
+        if szam%2 == 0:
+            db += 1
+            print("A páros számok száma: "+str(db)+"db.")
+
+
+
